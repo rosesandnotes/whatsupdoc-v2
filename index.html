@@ -41,7 +41,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contactsection">Contact</a>
             </li>  
 
             <li class="nav-item">
@@ -162,52 +162,21 @@
                   <h2 class="mx-auto mt-2 mb-5 text-secondary" id="subheadertext">Medical information you can trust.</h2>
 
               <div id="homeMenu">
-                  <a href="#"><img src="img/pharmacydir.jpg" alt="pharmacy-dictionary"></a> 
-                  <a href=""><img src="img/generalhealth.jpg" alt="general-health"></a>
-                   <a href=""><img src="img/physiciandir.jpg" alt="physician-directory"></a>
+                  <a class="homeOptions" href="#"><img src="img/pharmacydir.jpg" alt="pharmacy-dictionary"></a> 
+                  <a class="homeOptions" href=""><img src="img/generalhealth.jpg" alt="general-health"></a>
+                   <a class="homeOptions" href=""><img src="img/physiciandir.jpg" alt="physician-directory"></a>
               </div>
             </div>
         </div>
     </div>    
-                           
-    <div class="chatbox">
-                  <a class="open-button" id="openpanda" onclick="openForm()"><img src="img/doctorpanda.png"/></a>
-                  <a class="pandaformbox" id="pandaform" onclick="openForm()"><img src="img/doctorpandaform.png"/></a> 
-              
-        <div class="chat-popup" id="chatpopForm">                 
-            <form action="/action_page.php" class="chatform">                                             
-                  <label for="msg" class="title-chat" style="color: #41A6C2"><b>Live Chat your inquiry</b></label>
-                  <a class="close-button" onclick="closeForm()">&times;</a>                                                                  
-                  <hr>
-                  <textarea name="receivedmsg" required></textarea>
-                  <hr>
-                  <input type="text" placeholder="Type your message here" name="msg" required>
-                  <button type="submit" class="send-button"><img src="img/send-bt.png"/></button>
 
-            </form>
-        </div>
-              
-            <script>
-              function openForm() {
-                document.getElementById("chatpopForm").style.display = "block";
-                document.getElementById("openpanda").style.display = "none";
-                document.getElementById("pandaform").style.display = "block";
-              }
-              
-              function closeForm() {
-                document.getElementById("chatpopForm").style.display = "none";
-                document.getElementById("openpanda").style.display = "block";
-              }
-            </script>
-    </div>
-
+     <!-- About Section -->
     <div id="aboutsection">
-      <div class="container d-flex h-100 align-items-center">
+      <div class="container d-flex h-100 flex-row align-items-center">
         <div class="row">
           <div class="col-md-6 mx-auto" >
             <img src="img/about.jpg" width="100%" height="100%">
           </div>
-
           <div class="col-md-6 mx-auto">
             <h1 class="text-uppercase">About</h1>
             <p>
@@ -222,9 +191,66 @@
       </div>
     </div>
 
-    <div id="contactsection">
-      <div class="container d-flex-align-items-center">
-        <!-- CONTACT SECTION -->
+     <!-- Contact Section -->
+     <div id="contactsection">
+      <div class="container d-flex h-100 flex-column justify-content-center align-items-center">
+                <h1 class="text-uppercase" id="contactus" >Contact Us</h1>
+                <form id="contactForm">
+                    <div class="form-group">
+                      <label for="nameInput">Name</label>
+                      <input type="text" class="form-control" id="nameInput"  placeholder="Enter name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="emailInput">Email</label>
+                      <input type="email" class="form-control" id="emailInput" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="messageInput">Message</label>
+                      <textarea class="form-control" name="message" id="messageInput" cols="30" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">Submit</button>
+              </form>
+      </div>
+    </div> 
+
+    <!-- Chat box -->
+    <div class="chatbox">
+            <a class="open-button" id="openpanda" onclick="openForm()"><img src="img/doctorpanda.png"/></a>
+            <a class="pandaformbox" id="pandaform" onclick="openForm()"><img src="img/doctorpandaform.png"/></a> 
+        
+          <div class="chat-popup" id="chatpopForm">                 
+          <form action="/action_page.php" class="chatform">                                             
+                <label for="msg" class="title-chat" style="color: #41A6C2"><b>Live Chat your inquiry</b></label>
+                <a class="close-button" onclick="closeForm()">&times;</a>                                                                  
+                <hr>
+                <textarea name="receivedmsg" required></textarea>
+                <hr>
+                <input type="text" placeholder="Type your message here" name="msg" required>
+                <button type="submit" class="send-button"><img src="img/send-bt.png"/></button>
+
+          </form>
+          </div>
+      
+        <script>
+          function openForm() {
+            document.getElementById("chatpopForm").style.display = "block";
+            document.getElementById("openpanda").style.display = "none";
+            document.getElementById("pandaform").style.display = "block";
+          }
+          
+          function closeForm() {
+            document.getElementById("chatpopForm").style.display = "none";
+            document.getElementById("openpanda").style.display = "block";
+          }
+        </script>
+    </div>
+   
+    <!-- Footer -->
+    <div id="footer">
+      <div id="footersection" align=center>
+        <p>
+          Copyright &copy; White Pandas 2019
+        </p>
       </div>
     </div>
 
